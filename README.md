@@ -5,10 +5,8 @@
 <div align="center">
 
 <p align="center">
-<a href="https://archlinux.org" target="_blank"><img src="https://img.shields.io/badge/DISTRO-Arch-56b6c2?style=for-the-badge&logo=arch-linux" /></a>
-           <a href="https://www.debian.org" target="_blank"><img src="https://img.shields.io/badge/DISTRO-Debian-CE0058?style=for-the-badge&logo=Debian" /></a>
-	<a href="https://ubuntu.com/" target="_blank"><img src="https://img.shields.io/badge/DISTRO-Ubuntu-E95420?style=for-the-badge&logo=Ubuntu" /></a>
-  
+<a href="https://chromeos.google/intl/en_uk/" target="_blank"><img src="https://img.shields.io/badge/DISTRO-ChromeOS-ffcd46?style=for-the-badge&logo=google" /></a>
+
   
 <div align="center" style="line-height: 3;">
   <a href="https://www.deepseek.com/" target="_blank">
