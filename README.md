@@ -4,6 +4,7 @@
 
 <div align="center">
 
+
 <p align="center">
 <a href="https://chromeos.google/intl/en_uk/" target="_blank"><img src="https://img.shields.io/badge/DISTRO-ChromeOS-ffcd46?style=for-the-badge&logo=google" /></a>
 
@@ -18,6 +19,8 @@
   </a>
 </div>
 
+<div align="center">
+Sailing the 7 seas like Penguin's Eggs Remastersys, Refracta, Systemback and father Knoppix! 
 
 <div align="center">
 currently making the script for the functions to work from a linux install or from within chromeos/chromiumos 
