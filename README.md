@@ -26,3 +26,8 @@ Sailing the 7 seas like Penguin's Eggs Remastersys, Refracta, Systemback and fat
 currently making the script for the functions to work from a linux install or from within chromeos/chromiumos 
   <div align="center">
   the commands work my side give me some time to wrap them up into a functional script
+
+
+<div align="center">
+ ![2025-03-11-040510_hyprshot](https://github.com/user-attachments/assets/8b21aa26-354e-4cbc-ab75-b00645aa7f74)
+
