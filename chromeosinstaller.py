@@ -1,23 +1,61 @@
 import os
 import subprocess
 
+# ANSI escape codes for colors
+RED = "\033[31m"
+TEAL = "\033[36m"
+GOLD = "\033[33m"
+GREEN = "\033[32m"
+RESET = "\033[0m"
+
+def print_colored_ascii():
+    # Red ASCII art
+    red_ascii = f"""{RED}
+░█████╗░██╗░░░░░░█████╗░██╗░░░██╗██████╗░███████╗███╗░░░███╗░█████╗░██████╗░░██████╗
+██╔══██╗██║░░░░░██╔══██╗██║░░░██║██╔══██╗██╔════╝████╗░████║██╔══██╗██╔══██╗██╔════╝
+██║░░╚═╝██║░░░░░███████║██║░░░██║██║░░██║█████╗░░██╔████╔██║██║░░██║██║░░██║╚█████╗░
+██║░░██╗██║░░░░░██╔══██║██║░░░██║██║░░██║██╔══╝░░██║╚██╔╝██║██║░░██║██║░░██║░╚═══██╗
+╚█████╔╝███████╗██║░░██║╚██████╔╝██████╔╝███████╗██║░╚═╝░██║╚█████╔╝██████╔╝██████╔╝
+░╚════╝░╚══════╝╚═╝░░░░░░╚═════╝░╚═════╝░╚══════╝╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+{RESET}"""
+
+    # Teal custom text
+    teal_text = f"{TEAL}ClaudeMods ChromeOS Installer v1.0{RESET}"
+
+    # Print the ASCII art and text
+    print(red_ascii)
+    print(teal_text)
+    print()
+
 def main():
-    # Ask for the target drive (e.g., /dev/sda)
-    target_drive = input("Enter the target drive (e.g., /dev/sda): ").strip()
+    print_colored_ascii()
+
+    # Ask for the target drive (e.g., /dev/sda) in green
+    print(f"{GREEN}Enter the target drive (e.g., /dev/sda): {RESET}", end="")
+    target_drive = input().strip()
     if not os.path.exists(target_drive):
-        print(f"Device {target_drive} does not exist.")
+        print(f"{GOLD}Device {target_drive} does not exist.{RESET}")
         return
+
+    # Ask for the location of the recovery image in green
+    print(f"{GREEN}Enter the full path to the recovery image: {RESET}", end="")
+    recovery_image_path = input().strip()
+    if not os.path.exists(recovery_image_path):
+        print(f"{GOLD}Recovery image {recovery_image_path} does not exist.{RESET}")
+        return
+
+    # Extract the recovery image name from the path
+    recovery_image_name = os.path.basename(recovery_image_path)
 
     # Look for the 'chrome' folder in the current directory
     chrome_folder = os.path.join(os.getcwd(), "chrome")
     if not os.path.exists(chrome_folder):
-        print(f"Folder 'chrome' does not exist in the current directory.")
+        print(f"{GOLD}Folder 'chrome' does not exist in the current directory.{RESET}")
         return
 
-    # Run the chromeos-install.sh command
+    # Run the chromeos-install.sh command (default color)
     chromeos_script = "chromeos-install.sh"
-    chromeos_src = "/home/apex/Downloads/brunch_r132_stable_20250208/chromeos_16151.47.0_zork_recovery_stable-channel_ZorkMPKeys-v12.bin"
-    chromeos_command = f"sudo bash {chromeos_script} -src {chromeos_src} -dst {target_drive}"
+    chromeos_command = f"sudo bash {chromeos_script} -src {recovery_image_path} -dst {target_drive}"
 
     print(f"Running command: {chromeos_command}")
     try:
@@ -28,7 +66,7 @@ def main():
         print(f"Error running chromeos-install.sh: {e}")
         return
 
-    # Run partprobe to update the partition table
+    # Run partprobe to update the partition table (default color)
     partprobe_command = f"sudo partprobe {target_drive}"
     print(f"Running command: {partprobe_command}")
     try:
@@ -45,7 +83,7 @@ def main():
         print(f"No .img files found in {chrome_folder}.")
         return
 
-    # Install each .img file to the corresponding partition
+    # Install each .img file to the corresponding partition (default color)
     for img_file in img_files:
         # Extract the partition number from the filename (e.g., drive1.img → 1)
         partition_number = img_file.replace("drive", "").replace(".img", "")
