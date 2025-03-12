@@ -27,6 +27,14 @@ def print_colored_ascii():
     print(teal_text)
     print()
 
+def set_terminal_gold():
+    """Set the terminal text color to gold."""
+    print(GOLD, end="")
+
+def reset_terminal_color():
+    """Reset the terminal text color to default."""
+    print(RESET, end="")
+
 def main():
     print_colored_ascii()
 
@@ -53,7 +61,10 @@ def main():
         print(f"{GOLD}Folder 'chrome' does not exist in the current directory.{RESET}")
         return
 
-    # Run the chromeos-install.sh command (default color)
+    # Set terminal text color to gold before executing commands
+    set_terminal_gold()
+
+    # Run the chromeos-install.sh command
     chromeos_script = "chromeos-install.sh"
     chromeos_command = f"sudo bash {chromeos_script} -src {recovery_image_path} -dst {target_drive}"
 
@@ -64,9 +75,10 @@ def main():
         print("chromeos-install.sh completed successfully.")
     except subprocess.CalledProcessError as e:
         print(f"Error running chromeos-install.sh: {e}")
+        reset_terminal_color()
         return
 
-    # Run partprobe to update the partition table (default color)
+    # Run partprobe to update the partition table
     partprobe_command = f"sudo partprobe {target_drive}"
     print(f"Running command: {partprobe_command}")
     try:
@@ -74,6 +86,7 @@ def main():
         print("Partition table updated successfully.")
     except subprocess.CalledProcessError as e:
         print(f"Error running partprobe: {e}")
+        reset_terminal_color()
         return
 
     # Get a list of .img files in the 'chrome' folder
@@ -81,9 +94,10 @@ def main():
 
     if not img_files:
         print(f"No .img files found in {chrome_folder}.")
+        reset_terminal_color()
         return
 
-    # Install each .img file to the corresponding partition (default color)
+    # Install each .img file to the corresponding partition
     for img_file in img_files:
         # Extract the partition number from the filename (e.g., drive1.img → 1)
         partition_number = img_file.replace("drive", "").replace(".img", "")
@@ -105,6 +119,9 @@ def main():
             print(f"Successfully installed {img_file} to {target_partition}.")
         except subprocess.CalledProcessError as e:
             print(f"Error installing {img_file} to {target_partition}: {e}")
+
+    # Reset terminal text color to default after all commands are executed
+    reset_terminal_color()
 
 if __name__ == "__main__":
     main()
