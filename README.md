@@ -28,6 +28,7 @@ claudemods chromeos cloner v1.0 guide for scripts
 <div align="center">
     
 cloning guide
+<div align="center">
 use gparted to get your drive chromeos/chromiumos is installed on e.g /dev/sda
 to clone from arch use command sudo ./arch-chromeosclonerscript.bin
 to clone from ubuntu use command sudo ./ubuntu-chromeosclonerscript.bin
@@ -40,6 +41,7 @@ let the script do the rest it will create a folder chromeos-backup with 12 .imgs
 <div align="center">
 
 installation guide
+<div align="center">
 make sure chromeos-installerscript.py is in the same location of the chromeos-backup folder
 please download https://github.com/sebanc/brunch/releases/
 extract all files to directory the chromeos-installerscript.py is in
