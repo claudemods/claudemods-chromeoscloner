@@ -59,7 +59,7 @@ please download https://github.com/sebanc/brunch/releases/
         <div align="center" style="color: gold;">
 extract all downloaded files to directory the chromeos-installerscript.py is in
             <div align="center" style="color: gold;">
-use command python chromeosinstaller.py
+use command sudo python chromeosinstaller.py
                <div align="center" style="color: gold;">
 enter a drive to install to e.g /dev/sda
                     <div align="center" style="color: gold;">
@@ -82,6 +82,11 @@ it will take about 20-30 minutes to install your custom cloned system
 
     
 ![2025-03-13-041720_hyprshot](https://github.com/user-attachments/assets/6b82fd8a-7417-45c7-8179-c3cfea3ea846)
+
+
+<br><br>
+![Screenshot 2025-03-13 05 11 51](https://github.com/user-attachments/assets/b34d4944-a86c-41cc-847f-7153b83926ca)
+
 
 
 
