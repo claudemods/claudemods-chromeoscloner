@@ -16,7 +16,7 @@ let the script do the rest it will create a folder chromeos-backup with 12 .imgs
 installation guide
 please download https://github.com/sebanc/brunch/releases/
 extract all files to directory the chromeos-installerscript.py is in
-make sure chromeos-installerscript.py is in location of the chromeos-backup
+make sure chromeos-installerscript.py is in the same location of the chromeos-backup folder
 use command python chromeosinstaller.py
 enter a drive to install to e.g /dev/sda
 it ill take about 20-30 minutes to install your custom cloned system
