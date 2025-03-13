@@ -31,7 +31,20 @@ Sailing the 7 seas like Penguin's Eggs Remastersys, Refracta, Systemback and fat
 
 <div align="center" style="color: teal;">
 claudemods chromeos cloner v1.0 guide for scripts
+<br><br>
 
+currently supported distros to cloner from 
+
+arch
+
+<div align="center" style="color: teal;">
+kdeneon 24.04
+    
+<div align="center" style="color: teal;">
+ubuntu oracular
+    
+<div align="center" style="color: teal;">
+debian bookworm
 
 <br><br>
 
