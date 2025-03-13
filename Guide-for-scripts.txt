@@ -1,4 +1,4 @@
-claudemods chromeos cloner v1.0 guide for script
+claudemods chromeos cloner v1.0 guide for scripts
 
 cloning guide
 use gparted to get your drive chromeos/chromiumos is installed on e.g /dev/sda
