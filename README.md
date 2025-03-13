@@ -45,7 +45,7 @@ enter the drive chromeos/chromiumos is installed on
                     <div align="center" style="color: gold;">
 enter a location to clone to make sure it has enough space e.g around 25gb-30gb
                        <div align="center" style="color: gold;">
-let the script do the rest it will create a folder chromeos-backup with 12 .imgs it should take around 45 minutes
+let the script do the rest it will create a folder chromeos-backup with 12 .imgs it should take around 5-20 minutes
 
 <br><br>
 
