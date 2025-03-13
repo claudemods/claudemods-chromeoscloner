@@ -26,9 +26,11 @@ Sailing the 7 seas like Penguin's Eggs Remastersys, Refracta, Systemback and fat
 claudemods chromeos cloner v1.0 guide for scripts
 
 <div align="center">
-    
-cloning guide
+
+
+
 <div align="center">
+cloning guide
 use gparted to get your drive chromeos/chromiumos is installed on e.g /dev/sda
     <div align="center">
 to clone from arch use command sudo ./arch-chromeosclonerscript.bin
@@ -47,7 +49,6 @@ let the script do the rest it will create a folder chromeos-backup with 12 .imgs
 <div align="center">
 
 installation guide
-<div align="center">
 make sure chromeos-installerscript.py is in the same location of the chromeos-backup folder
     <div align="center">
 please download https://github.com/sebanc/brunch/releases/
