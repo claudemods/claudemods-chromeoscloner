@@ -53,12 +53,15 @@ it will take about 20-30 minutes to install your custom cloned system
 
 <div align="center">
 
+
 ![2025-03-12-120512_hyprshot](https://github.com/user-attachments/assets/4bfa55d3-1d0f-4b48-80c3-68eec09ecb27)
 
 <div align="center">
-    drive1.img which is HSTATE will only be used space e.g mines is 17gb
+    drive1.img which is HSTATE will only be used space e.g mines is 17gb i will update the white colours next update
+
     
-![2025-03-11-040510_hyprshot](https://github.com/user-attachments/assets/8b21aa26-354e-4cbc-ab75-b00645aa7f74)
+![2025-03-13-041720_hyprshot](https://github.com/user-attachments/assets/6b82fd8a-7417-45c7-8179-c3cfea3ea846)
+
 
 
 
