@@ -30,7 +30,16 @@ claudemods chromeos cloner v1.0 guide for scripts
 
 
 <div align="center">
+
+<br><br>
+
+<div align="center">
 cloning guide
+
+<br><br>
+
+
+<div align="center">
 use gparted to get your drive chromeos/chromiumos is installed on e.g /dev/sda
     <div align="center">
 to clone from arch use command sudo ./arch-chromeosclonerscript.bin
@@ -46,9 +55,12 @@ enter a location to clone to make sure it has enough space e.g around 25gb-30gb
 let the script do the rest it will create a folder chromeos-backup with 12 .imgs it should take around 45 minutes
 
 
-<div align="center">
+<br><br>
 
+<div align="center">
 installation guide
+<br><br>
+    <div align="center">
 make sure chromeos-installerscript.py is in the same location of the chromeos-backup folder
     <div align="center">
 please download https://github.com/sebanc/brunch/releases/
@@ -67,8 +79,11 @@ it will take about 20-30 minutes to install your custom cloned system
 
 <div align="center">
 
+<br><br>
 
 ![2025-03-12-120512_hyprshot](https://github.com/user-attachments/assets/4bfa55d3-1d0f-4b48-80c3-68eec09ecb27)
+
+<br><br>
 
 <div align="center">
     drive1.img which is HSTATE will only be used space e.g mines is 17gb i will update the white colours next update
