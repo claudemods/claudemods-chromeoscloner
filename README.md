@@ -19,62 +19,54 @@
   </a>
 </div>
 
-<div align="center">
+<div align="center" style="color: teal;">
 Sailing the 7 seas like Penguin's Eggs Remastersys, Refracta, Systemback and father Knoppix! 
 
-<div align="center">
+<div align="center" style="color: teal;">
 claudemods chromeos cloner v1.0 guide for scripts
 
-<div align="center">
-
-
-
-<div align="center">
 
 <br><br>
 
-<div align="center">
+<div align="center" style="color: teal;">
 cloning guide
 
 <br><br>
-
-
-<div align="center">
+<div align="center" style="color: gold;">
 use gparted to get your drive chromeos/chromiumos is installed on e.g /dev/sda
-    <div align="center">
+    <div align="center" style="color: gold;">
 to clone from arch use command sudo ./arch-chromeosclonerscript.bin
-        <div align="center">
+        <div align="center" style="color: gold;">
 to clone from ubuntu use command sudo ./ubuntu-chromeosclonerscript.bin
-            <div align="center">
+            <div align="center" style="color: gold;">
 to clone from debian use command sudo ./debian-chromeosclonerscript.bin
-                <div align="center">
+                <div align="center" style="color: gold;">
 enter the drive chromeos/chromiumos is installed on
-                    <div align="center">
+                    <div align="center" style="color: gold;">
 enter a location to clone to make sure it has enough space e.g around 25gb-30gb
-                        <div align="center">
+                       <div align="center" style="color: gold;">
 let the script do the rest it will create a folder chromeos-backup with 12 .imgs it should take around 45 minutes
 
-
 <br><br>
 
-<div align="center">
+<div align="center" style="color: teal;">
 installation guide
 <br><br>
-    <div align="center">
+    <div align="center" style="color: gold;">
 make sure chromeos-installerscript.py is in the same location of the chromeos-backup folder
-    <div align="center">
+    <div align="center" style="color: gold;">
 please download https://github.com/sebanc/brunch/releases/
-        <div align="center">
+        <div align="center" style="color: gold;">
 extract all downloaded files to directory the chromeos-installerscript.py is in
-            <div align="center">
+            <div align="center" style="color: gold;">
 use command python chromeosinstaller.py
-                <div align="center">
+               <div align="center" style="color: gold;">
 enter a drive to install to e.g /dev/sda
-                    <div align="center">
+                    <div align="center" style="color: gold;">
 enter the file name to the downloaded recovery you have in current directory of all scripts
                         <div align="center">
 let the script do the rest
-                            <div align="center">
+                            <div align="center" style="color: gold;">
 it will take about 20-30 minutes to install your custom cloned system
 
 <div align="center">
