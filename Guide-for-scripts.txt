@@ -6,7 +6,7 @@ to clone from arch use command sudo ./arch-chromeosclonerscript.bin
 to clone from ubuntu use command sudo ./ubuntu-chromeosclonerscript.bin
 to clone from debian use command sudo ./debian-chromeosclonerscript.bin
 enter the drive chromeos/chromiumos is installed on
-enter a location to clone to make sure it has enougb space e.g around 25gb-30gb
+enter a location to clone to make sure it has enough space e.g around 25gb-30gb
 let the script do the rest it will create a folder chromeos-backup with 12 .imgs it should take around 45 minutes
 
 
