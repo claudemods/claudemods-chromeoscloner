@@ -17,4 +17,5 @@ please download https://github.com/sebanc/brunch/releases/
 extract all files to directory the chromeos-installerscript.py is in
 use command python chromeosinstaller.py
 enter a drive to install to e.g /dev/sda
-it ill take about 20-30 minutes to install your custom cloned system
+currently it asks for location of the chromeos recovery it will be used to setup drives before installation 
+it will take about 20-30 minutes to install your custom cloned system
