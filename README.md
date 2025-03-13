@@ -9,8 +9,6 @@
 <a href="https://chromeos.google/intl/en_uk/" target="_blank"><img src="https://img.shields.io/badge/DISTRO-ChromeOS-ffcd46?style=for-the-badge&logo=google" /></a>
 
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
   
 <div align="center" style="line-height: 3;">
   <a href="https://www.deepseek.com/" target="_blank">
@@ -21,6 +19,12 @@
     />
   </a>
 </div>
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+
+
+
 
 <div align="center" style="color: teal;">
 Sailing the 7 seas like Penguin's Eggs Remastersys, Refracta, Systemback and father Knoppix! 
