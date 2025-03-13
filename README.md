@@ -23,10 +23,31 @@
 Sailing the 7 seas like Penguin's Eggs Remastersys, Refracta, Systemback and father Knoppix! 
 
 <div align="center">
-currently making the script for the functions to work from a linux install or from within chromeos/chromiumos 
-  <div align="center">
-  the commands work my side give me some time to wrap them up into a functional script
+claudemods chromeos cloner v1.0 guide for scripts
 
+<div align="center">
+    
+cloning guide
+use gparted to get your drive chromeos/chromiumos is installed on e.g /dev/sda
+to clone from arch use command sudo ./arch-chromeosclonerscript.bin
+to clone from ubuntu use command sudo ./ubuntu-chromeosclonerscript.bin
+to clone from debian use command sudo ./debian-chromeosclonerscript.bin
+enter the drive chromeos/chromiumos is installed on
+enter a location to clone to make sure it has enough space e.g around 25gb-30gb
+let the script do the rest it will create a folder chromeos-backup with 12 .imgs it should take around 45 minutes
+
+
+<div align="center">
+
+installation guide
+make sure chromeos-installerscript.py is in the same location of the chromeos-backup folder
+please download https://github.com/sebanc/brunch/releases/
+extract all files to directory the chromeos-installerscript.py is in
+use command python chromeosinstaller.py
+enter a drive to install to e.g /dev/sda
+enter the file name to the downloaded recovery you have in current directory of all scripts
+let the script do the rest
+it will take about 20-30 minutes to install your custom cloned system
 
 <div align="center">
 
