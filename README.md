@@ -7,6 +7,7 @@
 
 <p align="center">
 <a href="https://chromeos.google/intl/en_uk/" target="_blank"><img src="https://img.shields.io/badge/DISTRO-ChromeOS-ffcd46?style=for-the-badge&logo=google" /></a>
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   
 <div align="center" style="line-height: 3;">
