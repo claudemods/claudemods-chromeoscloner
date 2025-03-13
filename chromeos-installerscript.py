@@ -4,7 +4,7 @@ import subprocess
 # ANSI escape codes for colors
 RED = "\033[31m"
 TEAL = "\033[36m"
-GOLD = "\033[33m"
+GOLD = "\033[1;33m"
 GREEN = "\033[32m"
 RESET = "\033[0m"
 
@@ -20,20 +20,12 @@ def print_colored_ascii():
 {RESET}"""
 
     # Teal custom text
-    teal_text = f"{TEAL}ClaudeMods ChromeOS Installer Script v1.0{RESET}"
+    teal_text = f"{TEAL}ClaudeMods ChromeOS Installer v1.0{RESET}"
 
     # Print the ASCII art and text
     print(red_ascii)
     print(teal_text)
     print()
-
-def set_terminal_gold():
-    """Set the terminal text color to gold."""
-    print(GOLD, end="")
-
-def reset_terminal_color():
-    """Reset the terminal text color to default."""
-    print(RESET, end="")
 
 def main():
     print_colored_ascii()
@@ -42,59 +34,53 @@ def main():
     print(f"{GREEN}Enter the target drive (e.g., /dev/sda): {RESET}", end="")
     target_drive = input().strip()
     if not os.path.exists(target_drive):
-        print(f"{GOLD}Device {target_drive} does not exist.{RESET}")
+        print(f"Device {target_drive} does not exist.")
         return
 
-    # Ask for the location of the recovery image in green
-    print(f"{GREEN}Enter the full path to the recovery image: {RESET}", end="")
-    recovery_image_path = input().strip()
+    # Ask for the file name of the .bin recovery image in green
+    print(f"{GREEN}Enter the file name of the .bin recovery image (e.g., recovery.bin): {RESET}", end="")
+    recovery_image_name = input().strip()
+    recovery_image_path = recovery_image_name  # Assume the file is in the current directory
     if not os.path.exists(recovery_image_path):
-        print(f"{GOLD}Recovery image {recovery_image_path} does not exist.{RESET}")
+        print(f"Recovery image {recovery_image_path} does not exist in the current directory.")
         return
 
-    # Extract the recovery image name from the path
-    recovery_image_name = os.path.basename(recovery_image_path)
-
-    # Look for the 'chrome' folder in the current directory
-    chrome_folder = os.path.join(os.getcwd(), "chrome")
-    if not os.path.exists(chrome_folder):
-        print(f"{GOLD}Folder 'chrome' does not exist in the current directory.{RESET}")
+    # Look for the 'chromeos-backup' folder in the current directory
+    chromeos_backup_folder = os.path.join(os.getcwd(), "chromeos-backup")
+    if not os.path.exists(chromeos_backup_folder):
+        print(f"Folder 'chromeos-backup' does not exist in the current directory.")
         return
-
-    # Set terminal text color to gold before executing commands
-    set_terminal_gold()
 
     # Run the chromeos-install.sh command
     chromeos_script = "chromeos-install.sh"
     chromeos_command = f"sudo bash {chromeos_script} -src {recovery_image_path} -dst {target_drive}"
 
-    print(f"Running command: {chromeos_command}")
     try:
         # Run the chromeos-install.sh command and wait for it to finish
+        print(f"{GOLD}")  # Set terminal text color to gold for command output
         subprocess.run(chromeos_command, shell=True, check=True)
-        print("chromeos-install.sh completed successfully.")
+        print(f"{RESET}", end="")  # Reset terminal text color
+        print("ChromeOS installation completed successfully.")
     except subprocess.CalledProcessError as e:
-        print(f"Error running chromeos-install.sh: {e}")
-        reset_terminal_color()
+        print(f"{RESET}Error running chromeos-install.sh: {e}")
         return
 
     # Run partprobe to update the partition table
     partprobe_command = f"sudo partprobe {target_drive}"
-    print(f"Running command: {partprobe_command}")
     try:
+        print(f"{GOLD}")  # Set terminal text color to gold for command output
         subprocess.run(partprobe_command, shell=True, check=True)
+        print(f"{RESET}", end="")  # Reset terminal text color
         print("Partition table updated successfully.")
     except subprocess.CalledProcessError as e:
-        print(f"Error running partprobe: {e}")
-        reset_terminal_color()
+        print(f"{RESET}Error running partprobe: {e}")
         return
 
-    # Get a list of .img files in the 'chrome' folder
-    img_files = [f for f in os.listdir(chrome_folder) if f.endswith(".img") and f.startswith("drive")]
+    # Get a list of .img files in the 'chromeos-backup' folder
+    img_files = [f for f in os.listdir(chromeos_backup_folder) if f.endswith(".img") and f.startswith("drive")]
 
     if not img_files:
-        print(f"No .img files found in {chrome_folder}.")
-        reset_terminal_color()
+        print(f"No .img files found in {chromeos_backup_folder}.")
         return
 
     # Install each .img file to the corresponding partition
@@ -109,19 +95,17 @@ def main():
         target_partition = f"{target_drive}{partition_number}"
 
         # Construct the dd command
-        img_path = os.path.join(chrome_folder, img_file)
+        img_path = os.path.join(chromeos_backup_folder, img_file)
         command = f"sudo dd if={img_path} of={target_partition} bs=4M conv=fsync status=progress"
 
         # Run the command
-        print(f"Installing {img_file} to {target_partition}...")
+        print(f"{GOLD}")  # Set terminal text color to gold for command output
         try:
             subprocess.run(command, shell=True, check=True)
+            print(f"{RESET}", end="")  # Reset terminal text color
             print(f"Successfully installed {img_file} to {target_partition}.")
         except subprocess.CalledProcessError as e:
-            print(f"Error installing {img_file} to {target_partition}: {e}")
-
-    # Reset terminal text color to default after all commands are executed
-    reset_terminal_color()
+            print(f"{RESET}Error installing {img_file} to {target_partition}: {e}")
 
 if __name__ == "__main__":
     main()
