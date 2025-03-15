@@ -56,7 +56,7 @@ let the script do the rest it will create a folder chromeos-backup.squashfs with
 installation guide
 <br><br>
     <div align="center" style="color: gold;">
-make sure chromeos-installerscript.py is in the same location of the chromeos-backup folder
+make sure chromeos-installerscript.py is in the same location of the chromeos-backup.squashfs
     <div align="center" style="color: gold;">
 please download https://github.com/sebanc/brunch/releases/
         <div align="center" style="color: gold;">
