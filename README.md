@@ -55,15 +55,11 @@ cloning guide
 <div align="center" style="color: gold;">
 use gparted to get your drive chromeos/chromiumos is installed on e.g /dev/sda
     <div align="center" style="color: gold;">
-to clone from arch use command sudo ./arch-chromeosclonerscript.bin
-        <div align="center" style="color: gold;">
-to clone from ubuntu use command sudo ./ubuntu-chromeosclonerscript.bin
-            <div align="center" style="color: gold;">
-to clone from debian use command sudo ./debian-chromeosclonerscript.bin
+to clone from a linux system use command sudo ./arch-chromeosclonerscript.bin
                 <div align="center" style="color: gold;">
 enter the drive chromeos/chromiumos is installed on
                     <div align="center" style="color: gold;">
-enter a location to clone to make sure it has enough space e.g around 25gb-30gb
+enter a location to clone to make sure it has enough space e.g around 25gb-30gb the finished cloned system squashfs will be about 7gb
                        <div align="center" style="color: gold;">
 let the script do the rest it will create a folder chromeos-backup with 12 .imgs it should take around 5-20 minutes
 
@@ -93,12 +89,13 @@ it will take about 20-30 minutes to install your custom cloned system
 
 <br><br>
 
-![2025-03-12-120512_hyprshot](https://github.com/user-attachments/assets/4bfa55d3-1d0f-4b48-80c3-68eec09ecb27)
+![2025-03-15-031312_hyprshot](https://github.com/user-attachments/assets/60541445-d6a3-46f9-be4f-0119c8492899)
+
 
 <br><br>
 
 <div align="center">
-    drive1.img which is HSTATE will only be used space e.g mines is 17gb i will update the white colours next update
+
 
     
 ![2025-03-13-041720_hyprshot](https://github.com/user-attachments/assets/6b82fd8a-7417-45c7-8179-c3cfea3ea846)
