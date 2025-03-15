@@ -14,7 +14,7 @@ installation guide
 make sure chromeos-installerscript.py is in the same location of the chromeos-backup.squashfs
 please download https://github.com/sebanc/brunch/releases/
 extract all downloaded files to directory the chromeos-installerscript.py is in
-use command sudo python chromeosinstaller.py
+use command sudo python chromeos-installerscript.py
 enter a drive to install to e.g /dev/sda
 enter the file name to the downloaded recovery you have in current directory of all scripts
 let the script do the rest
