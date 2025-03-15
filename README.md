@@ -62,7 +62,7 @@ please download https://github.com/sebanc/brunch/releases/
         <div align="center" style="color: gold;">
 extract all downloaded files to directory the chromeos-installerscript.py is in
             <div align="center" style="color: gold;">
-use command sudo python chromeosinstaller.py
+use command sudo python chromeos-installerscript.py
                <div align="center" style="color: gold;">
 enter a drive to install to e.g /dev/sda
                     <div align="center" style="color: gold;">
