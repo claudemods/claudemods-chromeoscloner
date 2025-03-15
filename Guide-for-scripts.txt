@@ -2,21 +2,20 @@ claudemods chromeos cloner v1.0 guide for scripts
 
 cloning guide
 use gparted to get your drive chromeos/chromiumos is installed on e.g /dev/sda
-to clone from arch use command sudo ./arch-chromeosclonerscript.bin
-to clone from ubuntu use command sudo ./ubuntu-chromeosclonerscript.bin
-to clone from debian use command sudo ./debian-chromeosclonerscript.bin
+to clone from a linux system use command sudo ./chromeoscloner.bin
 enter the drive chromeos/chromiumos is installed on
 enter a location to clone to make sure it has enough space e.g around 25gb-30gb
-let the script do the rest it will create a folder chromeos-backup with 12 .imgs it should take around 45 minutes
+the finished cloned system squashfs will be about 7gb
+let the script do the rest it will create a folder chromeos-backup.squashfs with 12 .imgs it should take around 5-20 minutes 
 
 
 
 installation guide
-make sure chromeos-installerscript.py is in the same location of the chromeos-backup folder
+make sure chromeos-installerscript.py is in the same location of the chromeos-backup.squashfs
 please download https://github.com/sebanc/brunch/releases/
-extract all files to directory the chromeos-installerscript.py is in
+extract all downloaded files to directory the chromeos-installerscript.py is in
 use command sudo python chromeosinstaller.py
 enter a drive to install to e.g /dev/sda
 enter the file name to the downloaded recovery you have in current directory of all scripts
 let the script do the rest
-it will take about 20-30 minutes to install your custom cloned system
+it will take about 20-30 minutes to install your custom cloned system 
