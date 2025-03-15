@@ -48,7 +48,7 @@ enter a location to clone to make sure it has enough space e.g around 25gb-30gb
                         <div align="center" style="color: gold;">
                         the finished cloned system squashfs will be about 7gb
                        <div align="center" style="color: gold;">
-let the script do the rest it will create a folder chromeos-backup with 12 .imgs it should take around 5-20 minutes
+let the script do the rest it will create a folder chromeos-backup.squashfs with 12 .imgs it should take around 5-20 minutes
 
 <br><br>
 
