@@ -40,7 +40,7 @@ cloning guide
 <div align="center" style="color: gold;">
 use gparted to get your drive chromeos/chromiumos is installed on e.g /dev/sda
     <div align="center" style="color: gold;">
-to clone from a linux system use command sudo ./arch-chromeosclonerscript.bin
+to clone from a linux system use command sudo ./chromeoscloner.bin
                 <div align="center" style="color: gold;">
 enter the drive chromeos/chromiumos is installed on
                     <div align="center" style="color: gold;">
